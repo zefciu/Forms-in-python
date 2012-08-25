@@ -1,0 +1,83 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Singapore}
+  % \setbeamercovered{transparent}
+}
+
+
+\usepackage[utf8]{inputenc}
+
+% \usepackage{times}
+
+% For pygmentize
+\usepackage{fancyvrb}
+\usepackage{color}
+
+
+
+\title[Forms in python]
+{Challenges and how they are addressed}
+
+\author[]{Szymon Pyżalski}
+
+\institute{STX Next python experts}
+
+\date {PyConPL 2011}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+  \url{http://github.com/zefciu/forms-in-python/}
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+  %\pausesections
+\end{frame}
+
+
+\section{About form libraries}
+
+\begin{frame}{Why are they important?}
+
+  \begin{itemize}
+  \item
+    They are ubiquitus
+  \pause
+  \item
+    Closest to the user
+  \pause
+  \item
+    Our first line of defense
+    \pause
+  \item
+    Boilerplate and repetition removement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Scope of features}
+  \begin{itemize}
+  \item
+    User input handling
+    \begin{itemize}
+        \item
+            Type coercion
+        \item
+            Validation
+    \end{itemize}
+    \pause
+  \item
+    Widget generation
+    \pause
+  \item
+    Data schema introspection
+  \pause
+  \end{itemize}
+\end{frame}
+
+
+\end{document}
