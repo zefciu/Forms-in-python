@@ -64,9 +64,11 @@
   \begin{itemize}
   \item
     User input handling
+    \pause
     \begin{itemize}
         \item
             Type coercion
+            \pause
         \item
             Validation
     \end{itemize}
@@ -76,7 +78,19 @@
     \pause
   \item
     Data schema reflection
-  \pause
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Challenges}
+  \begin{itemize}
+  \item
+    Flexible but not a feature creep
+    \pause
+  \item
+    Allow reflection but don't bind user's hands
+    \pause
+  \item
+    Portable but allow to use specific features
   \end{itemize}
 \end{frame}
 
@@ -165,6 +179,68 @@
     \pause
     \item
         Strong separation between schema and form
+    \end{itemize}
+\end{frame}
+
+\section{Anthrax - a proposal}
+\begin{frame}{Basic ideas}
+    \begin{itemize}
+    \item
+        Highly modular. If you create a dependency, create a module
+        \pause
+    \item
+        There are 4 layers: fields, widgets, views and templates
+        \pause
+    \item
+        Use entry-points for to register what we have
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Building bricks}
+    \begin{description}
+    \item[Form]
+        A collection of subcontainers and fields
+        \pause
+    \item[Field]
+        Knows how to validate and coerce a particular data type
+        \pause
+    \item[Widget]
+        A suggestion about presentation
+        \pause
+    \item[Validator]
+        Works on a form or container, ad-hoc or generic
+        \pause
+    \end{description}
+\end{frame}
+
+\begin{frame}{Building bricks - continued}
+    \begin{description}
+    \item[Frontend]
+        A system to render the form in some way (pure HTML, dojo etc.)
+        \pause
+    \item[View]
+        Frontend-dependent object that knows how to render a widget
+        \pause
+    \item[Template]
+        Highly recommended to use those
+        \pause
+    \end{description}
+\end{frame}
+
+\begin{frame}{Building bricks relations}
+    \begin{itemize}
+    \item
+        A \emph{form} has some \emph{fields}. It can be rendered into
+        a \emph{frontend}.
+        \pause
+    \item
+        A \emph{field} has a list of \emph{widgets} that can handle it.
+        \pause
+    \item
+        A \emph{frontend} handles some \emph{widgets} by assigning \emph{views}
+        to render them. It negotiates with \emph{fields} to use the best
+        \emph{widget}.
+        \pause
     \end{itemize}
 \end{frame}
 
