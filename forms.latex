@@ -15,6 +15,7 @@
 \usepackage{fancyvrb}
 \usepackage{color}
 
+\input{styles}
 
 
 \title[Forms in python]
@@ -74,10 +75,97 @@
     Widget generation
     \pause
   \item
-    Data schema introspection
+    Data schema reflection
   \pause
   \end{itemize}
 \end{frame}
 
+\section{Solutions we have}
+
+\begin{frame}{FormEncode}
+    \begin{itemize}
+    \item
+        By: Ian Bicking
+    \pause
+    \item
+        Minimalist: only validation, coercion, html-filling
+    \pause
+    \item
+        Was recommended by pylons book
+    \pause
+    \item
+        The idea of schema reflection was \emph{rejected}!
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Django Forms}
+    \begin{itemize}
+    \item
+        Their second attempt
+    \pause
+    \item
+        Plays best in django framework
+    \pause
+    \item
+        Reflection of django ORM
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Django example}
+\small{
+\input{django}
+}
+\end{frame}
+
+\begin{frame}{Sprox}
+    \begin{itemize}
+    \item
+        Combination of FormEncode and ToscaWidgets
+    \pause
+    \item
+        Extendable
+    \pause
+    \item
+        Lots of code...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sprox example}
+\small{
+\input{sprox}
+}
+\end{frame}
+
+\begin{frame}{FormAlchemy}
+    \begin{itemize}
+    \item
+        Built upon idea of schema reflection
+    \pause
+    \item
+        Generates HTML forms and tables
+    \pause
+    \item
+        Type coercion and widget rendering done in \emph{renderers}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{FormAlchemy example}
+\small{
+\input{formalchemy}
+}
+\end{frame}
+
+\begin{frame}{formish}
+    \begin{itemize}
+    \item
+        Part of pylons project
+    \pause
+    \item
+        Doesn't do reflection
+    \pause
+    \item
+        Strong separation between schema and form
+    \end{itemize}
+\end{frame}
 
 \end{document}
