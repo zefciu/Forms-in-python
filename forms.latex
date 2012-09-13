@@ -145,7 +145,7 @@
 \end{frame}
 
 \begin{frame}{Sprox example}
-\small{
+\tiny{
 \input{sprox}
 }
 \end{frame}
@@ -169,21 +169,27 @@
 }
 \end{frame}
 
-\begin{frame}{formish}
+\begin{frame}{formish \& deform}
     \begin{itemize}
     \item
-        Part of pylons project
-    \pause
-    \item
-        Doesn't do reflection
+        Don't do reflection
     \pause
     \item
         Strong separation between schema and form
+    \pause
+    \item
+        The schema can also be used for other data-parsing purposes
     \end{itemize}
 \end{frame}
 
+\begin{frame}{deform example}
+\small{
+\input{deform}
+}
+\end{frame}
+
 \section{Anthrax - a proposal}
-\begin{frame}{Basic ideas}
+\begin{frame}{Basic ideas of anthrax}
     \begin{itemize}
     \item
         Highly modular. If you create a dependency, create a module
@@ -244,4 +250,16 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{A code example}
+\small{
+\input{anthrax}
+}
+\end{frame}
+
+\section{Questions}
+\begin{frame}{Questions}
+\huge{
+Questions?
+}
+\end{frame}
 \end{document}
